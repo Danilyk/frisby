@@ -13,7 +13,7 @@ describe('upload file', () => {
 			const region = values[0];
 			const boba = values[1];
 			const response = await frisby.get(`https://postman-echo.com/get?${region}=${boba}`);
-			console.log(response.body);
+//			console.log(response.body);
 			if (response.json.args[region] === '83'){
 				console.log('exit');
 				return;

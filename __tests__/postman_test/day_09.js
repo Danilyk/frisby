@@ -9,13 +9,13 @@ describe('Scripting', () => {
 		})
 			.expect('status',200)
 			.then( (response) => {
-				console.log('RESULTS RANDOM USER !!!!!!!!!!!!!!!!!!!!!!!!!!!');
-				console.log(response.body);
+//				console.log('RESULTS RANDOM USER !!!!!!!!!!!!!!!!!!!!!!!!!!!');
+//				console.log(response.body);
 				const body = JSON.parse(response.body);
-				console.log( body.results);
+//				console.log( body.results);
 				const people = body.results[0];
 				const name = people.name.first + ' ' + people.name.last;
-				console.log(name);
+//				console.log(name);
 				const email = people.email;
 				const id = people.login.uuid;
 					

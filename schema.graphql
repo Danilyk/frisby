@@ -1,6 +1,6 @@
-const { buildSchema } = require("graphql");
- 
-const schema = buildSchema(`
+	schema{
+		query: Query
+	}
 	type Artist {
 		name: String!
 		id: ID
@@ -26,4 +26,3 @@ const schema = buildSchema(`
 		preview_url: String
 		id: ID
 	}
-`);
