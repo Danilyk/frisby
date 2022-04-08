@@ -7,16 +7,12 @@ describe('Parse HTML', () => {
 		return frisby.get('https://www.bing.com/search?q=postman')
 			.then( (response) => {
 				const body = response.body;
-//				const body = response.;
-				
-//				console.log(body);
 				const $ = cheerio.load(body);
 				const linkVal = [];
 				$('.b_algo a').each( (i, el)=> {
-//					console.log(el);
 					linkVal.push($(el).attr('href'));
 				});
 				console.log(linkVal);	
-			})
+			});
 	});
 });

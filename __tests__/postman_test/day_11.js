@@ -12,7 +12,6 @@ describe('Monitoring plants', () => {
 				if (soilMoisture <= 60){
 					const count = (60 - soilMoisture) / WATER_DURATION;
 					for (let i=1; i<count; i++ ){
-//						const waterRequest = await 
 						frisby.post('https://water-ttl.herokuapp.com/water',{
 							body: {
 								duration : WATER_DURATION
@@ -26,29 +25,9 @@ describe('Monitoring plants', () => {
 							console.log('TEPER STOKA WODI');
 							console.log(result.json.level);
 						});
-//					do{
-//						frisby.post('https://water-ttl.herokuapp.com/water',{
-//							body: {
-//								duration : WATER_DURATION
-//							}
-//						})
-//						console.log('POLITO! YES!');
-//					}while(soilMoisture <= 80);
-//					frisby.post('https://water-ttl.herokuapp.com/water',{
-//						body: {
-//							duration : WATER_DURATION
-//						}
-//					})
-//					console.log('POLITO! YES!');
 				}else{
 					console.log('NORMALNA WODI');
 				}
-//				return frisby.get('https://water-ttl.herokuapp.com/hygrometer')
-//					.expect('status',200)
-//					.then( (result) => {
-//						console.log('STOKA WODI');
-//						console.log(result.json.level);
-//					});
 			});
 	});
 });
